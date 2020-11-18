@@ -1,8 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Bellotti Sorvetes`,
+    description: `Desde 1996 oferecendo o melhor sorvete. Somos uma fábrica artesanal, amamos o que fazemos. Venha se apaixonar pelo nosso sorvete!`,
+    author: `Bellotti Sorvetes`,
+    phone: `11995604471`,
+    email: `bellottisorvetes@gmail.com`,
+    siteURL: `https://bellottisorvetes.com.br`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
