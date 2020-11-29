@@ -10,32 +10,38 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-transformer-sharp`,
+      options: {
+        checkSupportedExtensions: false,
+      },
+    },
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-transition-link`,
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/static/img`,
       },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `uploads`,
         path: `${__dirname}/static/img/uploads`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-google-fonts-v2`,
       options: {
         fonts: [
           {
             family: "Titillium Web",
-            variable: true,
             weights: ["200", "300", "400", "700"],
           },
           {
             family: "Playfair Display",
-            variable: true,
             weights: ["500"],
           },
         ],

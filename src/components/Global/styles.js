@@ -1,10 +1,15 @@
 import { createGlobalStyle } from "styled-components"
 
 const GlobalStyle = createGlobalStyle`
-  /* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-  */
+  :root{
+    --main-color: #2B1500;
+    --second-color: #844009;
+    --third-color: #FFE4C4;
+    --fourth-color: #F25B22;
+    --bg-highlight: #FCFCFC;
+
+    --animations-time: 0.195s ease;
+  }
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
   a, abbr, acronym, address, big, cite, code,
@@ -30,8 +35,20 @@ const GlobalStyle = createGlobalStyle`
   footer, header, hgroup, menu, nav, section {
     display: block;
   }
+  /*  
+    Extra light: 200
+    Light: 300
+    Regular: 400
+    Bold: 700
+  */
   body {
+    font-size: 16px;
+    font-weight: normal;
+    font-family: "Titillium Web";  
     line-height: 1;
+    &.showMenu{
+      overflow: hidden;
+    }
   }
   ol, ul {
     list-style: none;
@@ -44,30 +61,11 @@ const GlobalStyle = createGlobalStyle`
     content: '';
     content: none;
   }
-  :root{
-    --main-color: #2B1500;
-    --second-color: #844009;
-    --third-color: #FFE4C4;
-    --fourth-color: #F25B22;
-    --bg-highlight: #FCFCFC;
-
-    --animations-time: 0.195s ease;
-  }
   table {
     border-collapse: collapse;
     border-spacing: 0;
   }
-  body {
-    font-size: 16px;
-    font-weight: normal;
-    font-family: "Titillium Web";    
-  }
-  /*  
-    Extra light: 200
-    Light: 300
-    Regular: 400
-    Bold: 700
-  */
+
   h1{
     font-size: 2.125rem;
     font-family: "Playfair Display";
