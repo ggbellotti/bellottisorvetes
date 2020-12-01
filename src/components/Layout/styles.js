@@ -6,3 +6,6 @@ export const Container = styled.div`
   margin: 0;
   padding: 0;
 `
+export const Content = styled.main`
+  margin-left: 60px;
+`
