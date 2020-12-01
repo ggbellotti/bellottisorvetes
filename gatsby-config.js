@@ -3,7 +3,8 @@ module.exports = {
     title: `Bellotti Sorvetes`,
     description: `Desde 1996 oferecendo o melhor sorvete. Somos uma fábrica artesanal, amamos o que fazemos. Venha se apaixonar pelo nosso sorvete!`,
     author: `Bellotti Sorvetes`,
-    phone: `11995604471`,
+    phone: `5511995604471`,
+    codeWhatsApp: `ZHTZSZDJJYBVO1`,
     email: `bellottisorvetes@gmail.com`,
     siteURL: `https://bellottisorvetes.com.br`,
   },
@@ -56,7 +57,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        //icon: `src/images/gatsby-icon.png`,
+        icon: `static/img/logo-bellotti-sorvetes.png`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

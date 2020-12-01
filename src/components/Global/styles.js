@@ -108,7 +108,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   ::-webkit-scrollbar-thumb {
-    background: var(--main-color);
+    background: var(--second-color);
   }
 
   ::-webkit-scrollbar-thumb:hover {

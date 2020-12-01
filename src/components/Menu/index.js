@@ -1,6 +1,7 @@
 import * as S from "./styles"
 
 import React, { useEffect, useState } from "react"
+import { graphql, useStaticQuery } from "gatsby"
 
 import Logo from "../Logo"
 import SocialLinks from "../SocialLinks"
@@ -11,6 +12,18 @@ const Menu = () => {
   useEffect(() => {
     document.body.classList.toggle("showMenu", open)
   }, [open])
+  const { site } = useStaticQuery(graphql`
+    query codeWhatsapp {
+      site {
+        siteMetadata {
+          codeWhatsApp
+        }
+      }
+    }
+  `)
+  const WhatsApp = site.siteMetadata.codeWhatsApp
+  // const MessageWhatsApp = "Olá tudo bem? Meu nome é ".replace(/ /g, "%20")
+  // No WhatsApp Business, o texto padrão é direto no celular e nãa na URL
   return (
     <S.Container>
       <S.Wrapper>
@@ -36,6 +49,13 @@ const Menu = () => {
               <S.MenuItemsLinks to={link.url}>{link.label}</S.MenuItemsLinks>
             </S.MenuItems>
           ))}
+          <S.LinkWhatsApp
+            href={`https://wa.me/message/${WhatsApp}`}
+            rel="nofollow noreferrer"
+            target="_blank"
+          >
+            WhatsApp
+          </S.LinkWhatsApp>
         </S.MenuList>
       </S.Menu>
     </S.Container>

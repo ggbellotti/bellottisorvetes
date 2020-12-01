@@ -1,4 +1,5 @@
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import media from "styled-media-query"
 import styled from "styled-components"
 
 export const Container = styled.nav`
@@ -17,10 +18,26 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  ${media.lessThan("medium")`
+    width: calc(100% - 50px);
+    height: 60px;
+    min-height: 30px;
+    flex-direction: row;
+    padding: 10px 25px;
+    align-items: center;
+    flex-direction: row-reverse;
+  `}
+  @media (max-height: 350px) {
+    min-height: auto;
+  }
 `
 export const LogoImg = styled.div`
   transition: all 0.25s;
+  width: 60px;
   opacity: ${({ open }) => (open ? "0" : "1")};
+  ${media.lessThan("medium")`
+    opacity: 1;
+  `}
 `
 export const LogoImgMenu = styled.div`
   position: absolute;
@@ -28,13 +45,32 @@ export const LogoImgMenu = styled.div`
   right: 30px;
   z-index: 99;
   width: 90px;
+  ${media.lessThan("medium")`
+    display: none;
+  `}
+`
+export const LinkWhatsApp = styled.a`
+  display: none;
+  background-color: var(--third-color);
+  padding: 10px;
+  color: var(--main-color);
+  font-size: 1.5rem;
+  ${media.lessThan("medium")`
+    display: block;
+  `}
 `
 export const SocialLinksMenu = styled.div`
   transition: all 0.25s;
   opacity: ${({ open }) => (open ? "0" : "1")};
+  ${media.lessThan("medium")`
+    display: none;
+  `}
+  @media (max-height: 350px) {
+    display: none;
+  }
 `
 export const BurguerLine = styled.span`
-  width: calc(100% - 34px);
+  width: 30px;
   display: block;
   height: 2px;
   background-color: #fff;
@@ -48,9 +84,17 @@ export const Burguer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1px;
+  padding: 15px 0;
   cursor: pointer;
   transition: all var(--animations-time);
+  margin-top: -15px;
+  width: 60px;
+  height: 20px;
+  ${media.lessThan("medium")`
+    margin-top: 0;
+    align-items: baseline;
+    width: 30px;
+  `}
   ${BurguerLine} {
     &:nth-child(1) {
       transform: rotate(${({ open }) => (open ? "50deg" : "0")});
@@ -74,10 +118,18 @@ export const Menu = styled.div`
   position: absolute;
   right: 0;
   top: 0;
-  transition: all 0.55s ease;
+  transition: all 0.35s ease;
   transform: translateX(${({ open }) => (open ? "0" : "-120%")});
   opacity: ${({ open }) => (open ? "1" : "0")};
   z-index: 98;
+  overflow: auto;
+  ${media.lessThan("medium")`
+    width: 100%;
+    transition: all 0.25s ease;
+    transform: none;
+    height: calc(100vh - 80px);
+    position: relative;
+  `}
 `
 export const MenuList = styled.ul`
   list-style: none;
@@ -87,12 +139,23 @@ export const MenuList = styled.ul`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  ${media.lessThan("medium")`
+    height: 575px;
+  `}
+  @media (max-height: 500px) {
+    height: 575px;
+  }
 `
 export const MenuItems = styled.li`
   margin-bottom: 45px;
   &:last-of-type {
     margin-bottom: 0;
   }
+  ${media.lessThan("medium")`
+    &:last-of-type {
+      margin-bottom: 35px;
+    }
+  `}
 `
 export const MenuItemsLinks = styled(AniLink)`
   font-size: 1.75rem;
