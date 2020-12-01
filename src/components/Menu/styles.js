@@ -6,6 +6,9 @@ export const Container = styled.nav`
   width: ${({ open }) => (open ? "100%" : "60px")};
   position: fixed;
   z-index: 99;
+  ${media.lessThan("medium")`
+    width: 100%;
+  `}
 `
 export const Wrapper = styled.div`
   height: calc(100vh - 50px);
@@ -129,7 +132,11 @@ export const Menu = styled.div`
     transform: none;
     height: calc(100vh - 80px);
     position: relative;
+    align-items: center;
   `}
+  @media (max-height: 600px) {
+    align-items: baseline;
+  }
 `
 export const MenuList = styled.ul`
   list-style: none;
@@ -141,6 +148,7 @@ export const MenuList = styled.ul`
   justify-content: center;
   ${media.lessThan("medium")`
     height: 575px;
+    margin-top: -50px;
   `}
   @media (max-height: 500px) {
     height: 575px;
