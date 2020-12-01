@@ -3,7 +3,7 @@ import media from "styled-media-query"
 import styled from "styled-components"
 
 export const Container = styled.nav`
-  width: 100%;
+  width: ${({ open }) => (open ? "100%" : "60px")};
   position: fixed;
   z-index: 99;
 `

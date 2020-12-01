@@ -25,7 +25,7 @@ const Menu = () => {
   // const MessageWhatsApp = "Olá tudo bem? Meu nome é ".replace(/ /g, "%20")
   // No WhatsApp Business, o texto padrão é direto no celular e nãa na URL
   return (
-    <S.Container>
+    <S.Container open={open}>
       <S.Wrapper>
         <S.Burguer open={open} onClick={() => setOpen(!open)}>
           <S.BurguerLine />
