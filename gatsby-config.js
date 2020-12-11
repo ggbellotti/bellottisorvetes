@@ -9,16 +9,40 @@ module.exports = {
     siteURL: `https://bellottisorvetes.com.br`,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-sharp`,
       options: {
         checkSupportedExtensions: false,
       },
     },
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-relative-images",
+            options: {
+              name: "uploads",
+              staticFolderName: "static",
+            },
+          },
+          {
+            resolve: "gatsby-remark-images",
+            options: {
+              maxWidth: 1280,
+              linkImagesToOriginal: false,
+            },
+          },
+          {
+            resolve: "gatsby-remark-images-zoom",
+          },
+          `gatsby-remark-lazy-load`,
+        ],
+      },
+    },
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-transition-link`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -34,16 +58,23 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `bannerHome`,
+        path: `${__dirname}/contents/bannerHome`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-fonts-v2`,
       options: {
         fonts: [
           {
-            family: "Titillium Web",
-            weights: ["200", "300", "400", "700"],
+            family: "JetBrains Mono",
+            weights: ["100", "400"],
           },
           {
-            family: "Playfair Display",
-            weights: ["500"],
+            family: "Roboto Mono",
+            weights: ["100", "400"],
           },
         ],
       },
@@ -51,15 +82,16 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Bellotti Sorvetes`,
+        short_name: `Bellotti Sorvetes`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#000`,
+        theme_color: `#000`,
         display: `minimal-ui`,
-        icon: `static/img/logo-bellotti-sorvetes.png`,
+        icon: `static/img/logo-bellotti-sorvetes.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-transition-link`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
