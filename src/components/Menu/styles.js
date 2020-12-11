@@ -6,6 +6,7 @@ export const Container = styled.nav`
   width: ${({ open }) => (open ? "100%" : "60px")};
   position: fixed;
   z-index: 99;
+  height: 0;
   ${media.lessThan("medium")`
     width: 100%;
   `}
@@ -130,11 +131,10 @@ export const Menu = styled.div`
     width: 100%;
     transition: all 0.25s ease;
     transform: none;
-    height: ${({ open }) => (open ? "calc(100vh - 80px)" : "0")};
+    height: calc(100vh - 80px);
     position: relative;
     align-items: center;
-    /* transform: ${({ open }) =>
-      open ? "translateY(0) " : "translateY(-100%)"}; */
+    transform: ${({ open }) => (open ? "translateY(0) " : "translateY(-100%)")};
   `}
   @media (max-height: 600px) {
     align-items: baseline;
