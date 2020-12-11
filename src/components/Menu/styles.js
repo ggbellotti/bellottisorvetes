@@ -130,9 +130,11 @@ export const Menu = styled.div`
     width: 100%;
     transition: all 0.25s ease;
     transform: none;
-    height: calc(100vh - 80px);
+    height: ${({ open }) => (open ? "calc(100vh - 80px)" : "0")};
     position: relative;
     align-items: center;
+    /* transform: ${({ open }) =>
+      open ? "translateY(0) " : "translateY(-100%)"}; */
   `}
   @media (max-height: 600px) {
     align-items: baseline;

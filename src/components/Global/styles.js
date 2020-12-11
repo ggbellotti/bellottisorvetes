@@ -104,7 +104,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   ::-webkit-scrollbar-track {
-    background: #fff;
+    background: var(--main-color);
   }
 
   ::-webkit-scrollbar-thumb {
