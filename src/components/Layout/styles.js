@@ -10,7 +10,9 @@ export const Container = styled.div`
 export const Content = styled.main`
   margin-left: 60px;
   padding: 0px 50px;
+  overflow: hidden;
   ${media.lessThan("medium")`
-    padding: 80px 15px 0 15px;
+    padding: 80px 15px 0 25px;
+    margin-left: 0;
   `}
 `
