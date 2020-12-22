@@ -65,16 +65,23 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `sabores`,
+        path: `${__dirname}/contents/sabores`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-fonts-v2`,
       options: {
         fonts: [
           {
-            family: "JetBrains Mono",
-            weights: ["100", "400"],
+            family: "Titillium Web",
+            weights: ["200", "300", "400", "700"],
           },
           {
-            family: "Roboto Mono",
-            weights: ["100", "400"],
+            family: "Playfair Display",
+            weights: ["500"],
           },
         ],
       },

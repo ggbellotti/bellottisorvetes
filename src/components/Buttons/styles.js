@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 export const Container = styled.div``
 export const Button = styled(AniLink)`
-  padding: 12px 30px;
+  padding: 15px 30px;
   text-decoration: none;
   color: #fff;
   background-color: var(--second-color);

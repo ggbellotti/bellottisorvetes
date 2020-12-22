@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
     --second-color: #844009;
     --third-color: #FFE4C4;
     --fourth-color: #F25B22;
+    --five-color: #A7632C;
     --bg-highlight: #FCFCFC;
 
     --animations-time: 0.195s ease;
@@ -72,6 +73,7 @@ const GlobalStyle = createGlobalStyle`
     margin-bottom: 0.9375rem;
     font-weight: 500;
     letter-spacing: 0.0437rem;
+    line-height: 1.1;
   }
   h2{
     font-family: "Titillium Web";    
@@ -80,12 +82,14 @@ const GlobalStyle = createGlobalStyle`
     text-transform: uppercase;
     letter-spacing: 0.4rem;
     margin-bottom: 0.625rem;
+    line-height: 1.3;
   }
   h3{
     font-family: "Playfair Display";
     font-size: 1.5rem;
     letter-spacing: 0.0437rem;
     margin-bottom: 0.9375rem;
+    line-height: 1.1;
   }
   p{
     font-size: 1rem;

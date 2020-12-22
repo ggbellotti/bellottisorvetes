@@ -2,43 +2,43 @@ import * as S from "./styles"
 
 import React, { Component } from "react"
 
-class Primary extends Component {
+class ButtonPrimary extends Component {
   render() {
     return (
       <S.ButtonPrimary
         to={this.props.to ? this.props.to : "/"}
         title={this.props.title ? this.props.title : this.props.text}
       >
-        {this.props.text ? this.props.text : "Button primary"}
+        {this.props.title ? this.props.title : "Button primary"}
       </S.ButtonPrimary>
     )
   }
 }
 
-class Secondary extends Component {
+class ButtonSecondary extends Component {
   render() {
     return (
       <S.ButtonSecondary
         to={this.props.to ? this.props.to : "/"}
         title={this.props.title ? this.props.title : this.props.text}
       >
-        {this.props.text ? this.props.text : "Button secondary"}
+        {this.props.title ? this.props.title : "Button secondary"}
       </S.ButtonSecondary>
     )
   }
 }
 
-class ToAction extends Component {
+class ButtonToAction extends Component {
   render() {
     return (
       <S.ButtonToAction
         to={this.props.to ? this.props.to : "/"}
         title={this.props.title ? this.props.title : this.props.text}
       >
-        {this.props.text ? this.props.text : "Button action"}
+        {this.props.title ? this.props.title : "Button action"}
       </S.ButtonToAction>
     )
   }
 }
 
-export { Primary, Secondary, ToAction }
+export { ButtonPrimary, ButtonSecondary, ButtonToAction }
