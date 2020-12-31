@@ -35,15 +35,7 @@ class HeaderBannerContact extends Component {
       <S.Container>
         <S.Wrapper className="contact">
           <BannerImg />
-          <S.Infos className="infos">
-            <h2>Contato</h2>
-            <h1>Está com alguma dúvida?</h1>
-            <p>
-              Entre em contato conosco pelo WhatsApp ou pelo nosso e-mail.
-              Teremos o maior prazer em te ajudar :)
-            </p>
-            <Contact />
-          </S.Infos>
+          <Contact />
         </S.Wrapper>
       </S.Container>
     )

@@ -8,6 +8,7 @@ class ButtonPrimary extends Component {
       <S.ButtonPrimary
         to={this.props.to ? this.props.to : "/"}
         title={this.props.title ? this.props.title : this.props.text}
+        target={this.props.target ? this.props.target : "_self"}
       >
         {this.props.title ? this.props.title : "Button primary"}
       </S.ButtonPrimary>

@@ -1,3 +1,4 @@
+import media from "styled-media-query"
 import styled from "styled-components"
 
 export const Container = styled.div`
@@ -13,4 +14,16 @@ export const Container = styled.div`
       margin-right: 8px;
     }
   }
+`
+export const Infos = styled.div`
+  z-index: 2;
+  a:first-child {
+    margin-right: 50px;
+    margin-bottom: 25px;
+  }
+  ${media.lessThan("small")`
+    a:first-child{
+      margin-right: 20px;
+    }
+  `}
 `
