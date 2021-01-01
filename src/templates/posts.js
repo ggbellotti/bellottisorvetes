@@ -123,7 +123,7 @@ const WorkPost = ({ data }) => {
           </p>
 
           <S.ButtonPrimary
-            href={`https://wa.me/${phone}?text=${message} \uD83E\uDC1B %0a
+            href={`https://wa.me/${phone}?text=${message} \u2193 %0a
             %0a*Número do pedido*: ${orderNumber} %0a
             %0a\u2192 *${InfosProduct.name.toUpperCase()}*
             %0a      \`\`\`\u2022 Embalagem de: ${

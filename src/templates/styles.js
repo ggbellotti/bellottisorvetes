@@ -37,15 +37,31 @@ export const Slider = styled.div``
 
 export const Container = styled.div`
   display: flex;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
   .navigation-wrapper {
     margin-left: -50px;
     width: 50%;
     position: relative;
+    @media (max-width: 1350px) {
+      width: auto;
+    }
+    @media (max-width: 768px) {
+      width: calc(100% + 65px);
+    }
   }
   .keen-slider {
     height: 100vh;
     min-width: 600px;
     cursor: grab;
+    @media (max-width: 1024px) {
+      min-width: 350px;
+    }
+    @media (max-width: 768px) {
+      min-width: 350px;
+      height: 40vh;
+    }
   }
   .prevNext {
     display: flex;
@@ -99,6 +115,9 @@ export const Image = styled(Img)`
 export const InfoProduct = styled.div`
   margin-left: 50px;
   margin-top: 65px;
+  @media (max-width: 768px) {
+    margin: 25px 0;
+  }
   p {
     margin-bottom: 45px;
   }
