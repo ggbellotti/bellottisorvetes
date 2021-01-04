@@ -19,6 +19,8 @@ const WorkPost = ({ data }) => {
   //INFOS PRODUCTS
   const InfosProduct = post.frontmatter
   const phone = data.site.siteMetadata.phone
+  const deliveryOrder = data.site.siteMetadata.deliveryOrder
+  const detailsOrder = data.site.siteMetadata.detailsOrder
   const options = InfosProduct.packs
   const [selectedOption, setSelectedOption] = useState(options[0])
   const message = "Gostaria de fazer essa encomenda"
@@ -118,9 +120,8 @@ const WorkPost = ({ data }) => {
             </span>
             <span>/Uni</span>
           </S.Price>
-          <p className="timeOrder">
-            *Lembrando que nossa produção leva de 2 a 3 dias úteis
-          </p>
+          <p className="deliveryOrder">{deliveryOrder}</p>
+          <p className="detailsOrder">{detailsOrder}</p>
 
           <S.ButtonPrimary
             href={`https://wa.me/${phone}?text=${message} \u2193 %0a
@@ -153,6 +154,8 @@ export const query = graphql`
       siteMetadata {
         siteURL
         phone
+        deliveryOrder
+        detailsOrder
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
