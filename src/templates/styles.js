@@ -48,7 +48,7 @@ export const Container = styled.div`
       width: auto;
     }
     @media (max-width: 768px) {
-      width: calc(100% + 65px);
+      width: calc(100% + 75px);
     }
   }
   .keen-slider {
@@ -124,8 +124,13 @@ export const InfoProduct = styled.div`
   span {
     font-size: 1.125rem;
   }
-  .timeOrder {
+  .deliveryOrder,
+  .detailsOrder {
     font-size: 0.8125rem;
+    margin-bottom: 0;
+  }
+  .detailsOrder {
+    margin-bottom: 45px;
   }
 `
 export const Pack = styled.div`
