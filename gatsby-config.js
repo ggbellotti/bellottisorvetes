@@ -7,6 +7,10 @@ module.exports = {
     codeWhatsApp: `ZHTZSZDJJYBVO1`,
     email: `bellottisorvetes@gmail.com`,
     siteURL: `https://bellottisorvetes.com.br`,
+    deliveryOrder: `*Entregas apenas para São Paulo - Capital.`,
+    detailsOrder: `**Lembrando que nossa produção leva de 2 a 3 dias úteis. Mais
+    detalhes serão dados através do WhatsApp (agendamento, pagamento,
+    frete etc).`,
   },
   plugins: [
     `gatsby-plugin-sharp`,
