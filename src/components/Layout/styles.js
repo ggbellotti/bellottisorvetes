@@ -12,7 +12,7 @@ export const Content = styled.main`
   padding: 0px 50px;
   overflow: hidden;
   ${media.lessThan("medium")`
-    padding: 80px 15px 0 25px;
+    padding: 80px 25px 0 25px;
     margin-left: 0;
   `}
 `

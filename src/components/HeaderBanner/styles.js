@@ -50,7 +50,7 @@ export const BannerImg = styled(Img)`
   }
   ${media.lessThan("medium")`
     height: 100%;
-    width: calc(100% + 40px);
+    width: calc(100% + 50px);
     margin: 0 0 0 -25px;
     position: absolute !important;
     z-index: -1;
@@ -65,7 +65,7 @@ export const OverlayImg = styled.div`
     rgba(255, 255, 255, 0) 100%
   );
   backdrop-filter: blur(10px);
-  width: calc(100% + 40px);
+  width: calc(100% + 50px);
   margin: 0 0 0 -25px;
   height: 100%;
   position: absolute;
