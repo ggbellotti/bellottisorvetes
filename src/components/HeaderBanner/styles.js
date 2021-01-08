@@ -12,9 +12,12 @@ export const Wrapper = styled.div`
   ${media.lessThan("medium")`
     flex-direction: column;
     align-items: baseline;
-    min-height: calc(100vh - 80px);
+    min-height: 400px;
     justify-content: center;
     margin-bottom: 25px;
+  `}
+  ${media.lessThan("small")`
+    min-height: calc(80vh - 80px);
   `}
   &.contact {
     align-items: flex-start;
@@ -55,6 +58,9 @@ export const BannerImg = styled(Img)`
     position: absolute !important;
     z-index: -1;
   `}
+  @media only screen and (min-width: 1024px) and (min-height: 1366px) and (orientation: portrait) {
+    max-height: 60vh;
+  }
 `
 export const OverlayImg = styled.div`
   display: none;

@@ -19,7 +19,7 @@ class HeaderBannerHome extends Component {
               saboroso <br />e apetitoso
             </S.Title>
             <S.Buttons>
-              <ButtonPrimary to="/sabores/" title="Ver sabores" />
+              <ButtonPrimary to="/lista-de-sabores/" title="Ver sabores" />
               <ButtonSecondary to="/contato/" title="Contato" />
             </S.Buttons>
           </S.Infos>
