@@ -128,6 +128,7 @@ export const InfoProduct = styled.div`
   .detailsOrder {
     font-size: 0.8125rem;
     margin-bottom: 0;
+    max-width: 440px;
   }
   .detailsOrder {
     margin-bottom: 45px;
@@ -217,7 +218,7 @@ export const Quantity = styled.div`
     }
   }
 `
-export const ButtonPrimary = styled.a`
+export const ButtonPrimaryPost = styled.a`
   padding: 15px 30px;
   text-decoration: none;
   color: #fff;
@@ -241,5 +242,16 @@ export const Price = styled.div`
   span:last-of-type {
     font-size: 1.0625rem;
     font-weight: 200;
+  }
+`
+export const Recommended = styled.div`
+  background-color: #f9f9f9;
+  width: calc(100% + 0px);
+  margin-left: -50px;
+  padding: 65px 50px;
+  display: flex;
+  flex-direction: column;
+  .cta-sabores {
+    align-self: center;
   }
 `

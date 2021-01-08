@@ -6,7 +6,9 @@ import React, { useState } from "react"
 
 import { ArrowLeft } from "@styled-icons/bootstrap/ArrowLeft"
 import { ArrowRight } from "@styled-icons/bootstrap/ArrowRight"
+import { ButtonPrimary } from "../components/Buttons"
 import Layout from "../components/Layout"
+import ListProducts from "../components/ListProducts"
 import NumericInput from "react-numeric-input"
 // import SEO from "../components/seo"
 import { graphql } from "gatsby"
@@ -123,7 +125,7 @@ const WorkPost = ({ data }) => {
           <p className="deliveryOrder">{deliveryOrder}</p>
           <p className="detailsOrder">{detailsOrder}</p>
 
-          <S.ButtonPrimary
+          <S.ButtonPrimaryPost
             href={`https://wa.me/${phone}?text=${message} \u2193 %0a
             %0a*Número do pedido*: ${orderNumber} %0a
             %0a\u2192 *${InfosProduct.name.toUpperCase()}*
@@ -141,9 +143,21 @@ const WorkPost = ({ data }) => {
             title="Pedir via WhatsApp"
           >
             Pedir via WhatsApp
-          </S.ButtonPrimary>
+          </S.ButtonPrimaryPost>
         </S.InfoProduct>
       </S.Container>
+      <S.Recommended>
+        <ListProducts
+          title="Sabores que você vai gostar"
+          subtitle="Confira outros sabores"
+          description=" "
+        />
+        <ButtonPrimary
+          className="cta-sabores"
+          to="/lista-de-sabores/"
+          title="Ver Lista completa"
+        />
+      </S.Recommended>
     </Layout>
   )
 }
