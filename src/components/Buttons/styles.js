@@ -9,6 +9,7 @@ export const Button = styled(AniLink)`
   background-color: var(--second-color);
   display: inline-block;
   text-transform: uppercase;
+  letter-spacing: 1px;
   filter: drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.25));
   &:hover {
     background-color: var(--main-color);
