@@ -71,6 +71,20 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `contato`,
+        path: `${__dirname}/contents/contato`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `promocoes`,
+        path: `${__dirname}/contents/promocoes`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `sabores`,
         path: `${__dirname}/contents/sabores`,
       },

@@ -4,11 +4,11 @@ import styled from "styled-components"
 
 export const Container = styled.div`
   position: relative;
+  margin-bottom: 75px;
 `
 export const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 75px;
   ${media.lessThan("medium")`
     flex-direction: column;
     align-items: baseline;

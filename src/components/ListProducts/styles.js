@@ -4,7 +4,7 @@ import media from "styled-media-query"
 import styled from "styled-components"
 
 export const Container = styled.div`
-  margin-bottom: 40px;
+  margin-bottom: 75px;
   .navigation-wrapper {
     ${media.lessThan("medium")`
       padding-left: 10px;
