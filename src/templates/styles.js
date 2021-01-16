@@ -248,12 +248,7 @@ export const Price = styled.div`
   }
 `
 export const Recommended = styled.div`
-  background-color: #f9f9f9;
-  width: calc(100% + 0px);
-  margin-left: -50px;
-  padding: 65px 50px;
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 0;
   .cta-sabores {
     align-self: center;
   }

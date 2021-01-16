@@ -5,7 +5,18 @@ import media from "styled-media-query"
 import styled from "styled-components"
 
 export const Container = styled.div`
-  margin-bottom: 75px;
+  background-color: #f9f9f9;
+  width: calc(100% + 0px);
+  margin-left: -50px;
+  padding: 65px 50px;
+  padding-bottom: 25px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   .navigation-wrapper {
     ${media.lessThan("medium")`
       padding-left: 10px;

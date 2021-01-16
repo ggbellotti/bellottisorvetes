@@ -9,6 +9,7 @@ import { ArrowRight } from "@styled-icons/bootstrap/ArrowRight"
 import Layout from "../components/Layout"
 import ListProducts from "../components/ListProducts"
 import NumericInput from "react-numeric-input"
+import SEO from "../components/seo"
 // import SEO from "../components/seo"
 import { graphql } from "gatsby"
 import { rand } from "@jsweb/randkey"
@@ -55,6 +56,15 @@ const WorkPost = ({ data }) => {
 
   return (
     <Layout>
+      <SEO
+        title={post.frontmatter.name}
+        description={"Bellotti sorvetes - " + post.frontmatter.description}
+        image={
+          post.frontmatter.image === null
+            ? ""
+            : post.frontmatter.image.childImageSharp.fluid.src
+        }
+      />
       <S.GlobalStyle />
       <S.Container>
         <div className="navigation-wrapper">
@@ -189,6 +199,13 @@ export const query = graphql`
         name
         description
         packs
+        image {
+          childImageSharp {
+            fluid {
+              src
+            }
+          }
+        }
         images {
           id
           childImageSharp {

@@ -4,7 +4,6 @@ import styled from "styled-components"
 
 export const Container = styled.div`
   position: relative;
-  margin-bottom: 75px;
 `
 export const Wrapper = styled.div`
   display: flex;
@@ -14,7 +13,6 @@ export const Wrapper = styled.div`
     align-items: baseline;
     min-height: 400px;
     justify-content: center;
-    margin-bottom: 25px;
   `}
   ${media.lessThan("small")`
     min-height: calc(80vh - 80px);

@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 
 export const Container = styled.div`
-  margin-bottom: 75px;
+  margin: 75px 0;
   @media (max-width: 1024px) {
     width: calc(100% + 50px);
     margin-left: -25px;
