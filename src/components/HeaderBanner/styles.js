@@ -70,7 +70,7 @@ export const OverlayImg = styled.div`
     rgba(255, 255, 255, 0.45) 50%,
     rgba(255, 255, 255, 0) 100%
   );
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); */
   width: calc(100% + 50px);
   margin: 0 0 0 -25px;
   height: 100%;
@@ -79,13 +79,16 @@ export const OverlayImg = styled.div`
   z-index: 1;
   ${media.lessThan("medium")`
     display: block;
+    background: linear-gradient( 90deg,rgba(255,255,255,0.75) 50%,rgba(255,255,255,0) 100% );
+    width: calc(65% + 50px);
   `}
   ${media.lessThan("small")`
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, .65) 50%,
-    rgba(255, 255, 255, .65) 100%
-  );
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, .65) 50%,
+      rgba(255, 255, 255, .65) 100%
+    );
+    width: calc(100% + 50px);
   `}
 `
 export const Infos = styled.div`
@@ -106,9 +109,6 @@ export const Title = styled.h1`
   line-height: 1.3;
   margin-bottom: 45px;
   ${media.lessThan("small")`
-    font-size: 3.375rem;
-  `}
-  @media(max-width: 350px) {
     font-size: 2.375rem;
-  }
+  `}
 `

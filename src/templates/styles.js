@@ -124,14 +124,17 @@ export const InfoProduct = styled.div`
   span {
     font-size: 1.125rem;
   }
-  .deliveryOrder,
-  .detailsOrder {
+  .details {
     font-size: 0.8125rem;
     margin-bottom: 0;
     max-width: 440px;
-  }
-  .detailsOrder {
-    margin-bottom: 45px;
+    a {
+      color: var(--main-color);
+      text-decoration: underline;
+    }
+    &:last-of-type {
+      margin-bottom: 45px;
+    }
   }
 `
 export const Pack = styled.div`

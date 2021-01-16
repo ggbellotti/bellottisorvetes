@@ -44,7 +44,7 @@ export const BoxInfos = styled.div`
   z-index: 2;
   margin-top: -50px;
   @media (max-width: 1024px) {
-    max-width: 450px;
+    max-width: 100%;
     padding: 50px 20px;
     margin: 0;
     height: auto;
@@ -70,6 +70,7 @@ export const Infos = styled.div`
   }
   @media (max-width: 1024px) {
     padding: 0;
+    max-width: 100%;
   }
 `
 export const Subtitle = styled.h2`
@@ -79,6 +80,9 @@ export const Title = styled.h1`
   color: ${props => props.color || "#fff"};
   max-width: 350px;
   margin-bottom: 25px;
+  @media (max-width: 1024px) {
+    max-width: 100%;
+  }
 `
 export const Description = styled.p`
   color: ${props => props.color || "#fff"};

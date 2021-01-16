@@ -1,4 +1,5 @@
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { ButtonPrimary } from "../Buttons"
 import Img from "gatsby-image"
 import media from "styled-media-query"
 import styled from "styled-components"
@@ -213,4 +214,9 @@ export const Products = styled(AniLink)`
       display: none;
     }
   `}
+`
+export const ViewMore = styled(ButtonPrimary)`
+  margin: 55px auto 35px auto;
+  display: block;
+  max-width: fit-content;
 `

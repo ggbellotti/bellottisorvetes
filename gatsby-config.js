@@ -7,10 +7,12 @@ module.exports = {
     codeWhatsApp: `ZHTZSZDJJYBVO1`,
     email: `bellottisorvetes@gmail.com`,
     siteURL: `https://bellottisorvetes.com.br`,
+    deliveryIfood: `https://www.ifood.com.br/delivery/sao-paulo-sp/bellotti-sorvetes-jardim-figueira-grande/daf6e79b-f761-4ca5-bd44-f9b3f267d142`,
     deliveryOrder: `*Entregas apenas para São Paulo - Capital.`,
     detailsOrder: `**Lembrando que nossa produção leva de 2 a 3 dias úteis. Mais
     detalhes serão dados através do WhatsApp (agendamento, pagamento,
     frete etc).`,
+    detailsOnline: `***Confira se se temos esse sabor a pronta entrega`,
   },
   plugins: [
     `gatsby-plugin-sharp`,

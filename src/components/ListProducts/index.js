@@ -165,35 +165,7 @@ const ListProducts = props => {
           </div>
         )}
       </S.SliderImage>
-      {/* <div className="navigation-wrapper">
-        <div ref={sliderRef} className="keen-slider">
-          {ImagesProduct.map(({ childImageSharp: { fluid } }) => (
-            <div key={fluid} className="keen-slider__slide">
-              <S.Image fluid={fluid} />
-            </div>
-          ))}
-        </div>
-        {slider && (
-          <div className="prevNext">
-            <span
-              onClick={e => e.stopPropagation() || slider.prev()}
-              onKeyDown={e => e.stopPropagation() || slider.prev()}
-              disabled={currentSlide === 0}
-              role="button"
-            >
-              <ArrowLeft />
-            </span>
-            <span
-              onClick={e => e.stopPropagation() || slider.next()}
-              disabled={currentSlide === slider.details().size - 1}
-              onKeyDown={e => e.stopPropagation() || slider.prev()}
-              role="button"
-            >
-              <ArrowRight />
-            </span>
-          </div>
-        )}
-      </div> */}
+      <S.ViewMore title="Ver Lista completa" to="/lista-de-sabores/" />
     </S.Container>
   )
 }

@@ -8,7 +8,7 @@ titlePrimaryBtn: Comprar Agora
 urlPrimaryBtn: "/lista-de-sabores/"
 titleSecondaryBtn: Informações
 urlSecondaryBtn: "/contato/"
-colorBg: "#2B1500"
-colorTexts: "#fff"
+colorBg: "#CDE9EA"
+colorTexts: "#000"
 image: "/img/uploads/promocao.jpg"
 ---

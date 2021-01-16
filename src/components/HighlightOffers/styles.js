@@ -9,6 +9,9 @@ export const Container = styled.div`
     width: calc(100% + 50px);
     margin-left: -25px;
   }
+  @media (max-width: 570px) {
+    margin-bottom: 25px;
+  }
 `
 export const Wrapper = styled.div`
   display: flex;
@@ -32,7 +35,7 @@ export const BoxInfos = styled.div`
   margin-top: 50px;
   z-index: 2;
   @media (max-width: 1024px) {
-    max-width: 450px;
+    max-width: 100%;
     padding: 50px 20px;
     margin: 0;
   }
@@ -53,6 +56,9 @@ export const Subtitle = styled.h2`
 export const Title = styled.h1`
   color: ${props => props.color || "#fff"};
   max-width: 350px;
+  @media (max-width: 1024px) {
+    max-width: 100%;
+  }
 `
 export const Description = styled.p`
   color: ${props => props.color || "#fff"};

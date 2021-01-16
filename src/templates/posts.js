@@ -6,7 +6,6 @@ import React, { useState } from "react"
 
 import { ArrowLeft } from "@styled-icons/bootstrap/ArrowLeft"
 import { ArrowRight } from "@styled-icons/bootstrap/ArrowRight"
-import { ButtonPrimary } from "../components/Buttons"
 import Layout from "../components/Layout"
 import ListProducts from "../components/ListProducts"
 import NumericInput from "react-numeric-input"
@@ -122,8 +121,20 @@ const WorkPost = ({ data }) => {
             </span>
             <span>/Uni</span>
           </S.Price>
-          <p className="deliveryOrder">{deliveryOrder}</p>
-          <p className="detailsOrder">{detailsOrder}</p>
+          <p className="details">{deliveryOrder}</p>
+          <p className="details">{detailsOrder}</p>
+          <p className="details">
+            {data.site.siteMetadata.detailsOnline}&nbsp;
+            <a
+              className="details"
+              target="_blank"
+              href={data.site.siteMetadata.deliveryIfood}
+              rel="noopener noreferrer"
+            >
+              clicando aqui
+            </a>
+            .
+          </p>
 
           <S.ButtonPrimaryPost
             href={`https://wa.me/${phone}?text=${message} \u2193 %0a
@@ -142,7 +153,7 @@ const WorkPost = ({ data }) => {
             target="_blank"
             title="Pedir via WhatsApp"
           >
-            Pedir via WhatsApp
+            Fazer encomenda
           </S.ButtonPrimaryPost>
         </S.InfoProduct>
       </S.Container>
@@ -151,11 +162,6 @@ const WorkPost = ({ data }) => {
           title="Sabores que você vai gostar"
           subtitle="Confira outros sabores"
           description=" "
-        />
-        <ButtonPrimary
-          className="cta-sabores"
-          to="/lista-de-sabores/"
-          title="Ver Lista completa"
         />
       </S.Recommended>
     </Layout>
@@ -170,6 +176,8 @@ export const query = graphql`
         phone
         deliveryOrder
         detailsOrder
+        detailsOnline
+        deliveryIfood
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
