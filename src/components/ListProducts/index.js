@@ -107,7 +107,7 @@ const ListProducts = props => {
                 },
               }) => (
                 <div key={id} className="keen-slider__slide">
-                  <S.Products to={slug}>
+                  <S.Products cover bg="#2B1500" to={slug} title={name}>
                     <S.BackgroundImage fluid={fluid} />
                     <S.Overlay />
                     <S.Infos>
@@ -165,7 +165,12 @@ const ListProducts = props => {
           </div>
         )}
       </S.SliderImage>
-      <S.ViewMore title="Ver Lista completa" to="/lista-de-sabores/" />
+      <S.ViewMore
+        cover
+        bg="#2B1500"
+        title="Ver lista completa"
+        to="/lista-de-sabores/"
+      />
     </S.Container>
   )
 }

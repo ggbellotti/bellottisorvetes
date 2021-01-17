@@ -17,8 +17,17 @@ const Logo = () => {
     }
   `)
   return (
-    <AniLink to="/">
-      <Img fluid={logo.file.childImageSharp.fluid} />
+    <AniLink
+      cover
+      bg="#2B1500"
+      direction="right"
+      to="/"
+      title="Bellotti Sorvetes"
+    >
+      <Img
+        alt="Logo Bellotti Sorvetes"
+        fluid={logo.file.childImageSharp.fluid}
+      />
     </AniLink>
   )
 }

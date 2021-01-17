@@ -2,17 +2,19 @@ module.exports = {
   siteMetadata: {
     title: `Bellotti Sorvetes`,
     description: `Desde 1996 oferecendo o melhor sorvete. Somos uma fábrica artesanal, amamos o que fazemos. Venha se apaixonar pelo nosso sorvete!`,
+    poweredBy: `https://www.guilhermebellotti.dev`,
     author: `Bellotti Sorvetes`,
     phone: `5511995604471`,
     codeWhatsApp: `ZHTZSZDJJYBVO1`,
     email: `bellottisorvetes@gmail.com`,
     siteURL: `https://bellottisorvetes.com.br`,
+    instagramURL: `https://www.instagram.com/bellottisorvetes/`,
     deliveryIfood: `https://www.ifood.com.br/delivery/sao-paulo-sp/bellotti-sorvetes-jardim-figueira-grande/daf6e79b-f761-4ca5-bd44-f9b3f267d142`,
     deliveryOrder: `*Entregas apenas para São Paulo - Capital.`,
     detailsOrder: `**Lembrando que nossa produção leva de 2 a 3 dias úteis. Mais
     detalhes serão dados através do WhatsApp (agendamento, pagamento,
     frete etc).`,
-    detailsOnline: `***Confira se se temos esse sabor a pronta entrega`,
+    detailsOnline: `***Confira se temos esse sabor a pronta entrega`,
   },
   plugins: [
     `gatsby-plugin-sharp`,

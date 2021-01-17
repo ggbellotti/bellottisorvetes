@@ -27,7 +27,7 @@ const Menu = () => {
   return (
     <S.Container open={open}>
       <S.Wrapper>
-        <S.Burguer open={open} onClick={() => setOpen(!open)}>
+        <S.Burguer title="Menu" open={open} onClick={() => setOpen(!open)}>
           <S.BurguerLine />
           <S.BurguerLine />
           <S.BurguerLine />
@@ -46,7 +46,14 @@ const Menu = () => {
         <S.MenuList>
           {links.map((link, i) => (
             <S.MenuItems key={i}>
-              <S.MenuItemsLinks to={link.url}>{link.label}</S.MenuItemsLinks>
+              <S.MenuItemsLinks
+                paintDrip
+                hex="#F25B22"
+                to={link.url}
+                title={link.label}
+              >
+                {link.label}
+              </S.MenuItemsLinks>
             </S.MenuItems>
           ))}
           <S.LinkWhatsApp

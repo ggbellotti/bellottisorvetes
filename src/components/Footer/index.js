@@ -11,6 +11,9 @@ const Footer = () => {
       site {
         siteMetadata {
           deliveryIfood
+          codeWhatsApp
+          instagramURL
+          poweredBy
         }
       }
     }
@@ -25,33 +28,48 @@ const Footer = () => {
         </S.Column>
         <S.Column>
           <S.Title>Institucional</S.Title>
-          <S.Link to="/blog/">
+          <S.Link cover bg="#2B1500" to="/blog/" title="Blog">
             <S.SubTitle>Blog</S.SubTitle>
           </S.Link>
-          <S.Link to="/sobre-nos/">
+          <S.Link cover bg="#2B1500" to="/sobre-nos/" title="Sobre nós">
             <S.SubTitle>Sobre nós</S.SubTitle>
           </S.Link>
-          <S.Link to="/lista-de-sabores/">
+          <S.Link
+            cover
+            bg="#2B1500"
+            to="/lista-de-sabores/"
+            title="Lista de sabores"
+          >
             <S.SubTitle>Lista de sabores</S.SubTitle>
           </S.Link>
         </S.Column>
         <S.Column>
           <S.Title>SAC</S.Title>
-          <S.Link to="/contato/">
+          <S.Link cover bg="#2B1500" to="/contato/" title="Contato">
             <S.SubTitle>Contato</S.SubTitle>
           </S.Link>
-          <S.Link to="/contato/">
+          <S.Link cover bg="#2B1500" to="/contato/" title="Dúvidas gerais">
             <S.SubTitle>Dúvidas gerais</S.SubTitle>
           </S.Link>
         </S.Column>
         <S.Column>
           <S.Title>Social</S.Title>
-          <S.Link to="/contato/">
+          <a
+            href={site.siteMetadata.instagramURL}
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Instagram"
+          >
             <S.SubTitle>Instagram</S.SubTitle>
-          </S.Link>
-          <S.Link to="/contato/">
+          </a>
+          <a
+            href={`https://wa.me/message/${site.siteMetadata.codeWhatsApp}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            title="WhatsApp"
+          >
             <S.SubTitle>WhatsApp</S.SubTitle>
-          </S.Link>
+          </a>
         </S.Column>
         <S.Column>
           <S.Title>Delivery</S.Title>
@@ -68,7 +86,7 @@ const Footer = () => {
       <a
         className="powered"
         target="_blank"
-        href="https://www.guilhermebellotti.dev"
+        href={site.siteMetadata.poweredBy}
         rel="noopener noreferrer"
       >
         Feito por Guilherme Bellotti

@@ -12,17 +12,20 @@ const Socials = () => {
       site {
         siteMetadata {
           codeWhatsApp
+          instagramURL
         }
       }
     }
   `)
   const links = [
     {
-      label: <Instagram />,
-      url: "https://www.instagram.com/bellottisorvetes/",
+      label: <Instagram alt="Instagram" />,
+      title: "Instagram",
+      url: site.siteMetadata.instagramURL,
     },
     {
-      label: <Whatsapp />,
+      label: <Whatsapp alt="WhatsApp" />,
+      title: "WhatsApp",
       url: `https://wa.me/message/${site.siteMetadata.codeWhatsApp}`,
     },
   ]
@@ -34,6 +37,7 @@ const Socials = () => {
           href={link.url}
           rel="noopener noreferrer"
           target="_blank"
+          title={link.title}
         >
           {link.label}
         </S.Links>

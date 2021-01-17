@@ -71,7 +71,10 @@ const WorkPost = ({ data }) => {
           <div ref={sliderRef} className="keen-slider">
             {ImagesProduct.map(({ id, childImageSharp: { fluid } }) => (
               <div key={id} className="keen-slider__slide">
-                <S.Image fluid={fluid} />
+                <S.Image
+                  alt={"Bellotti Sorvetes - " + post.frontmatter.description}
+                  fluid={fluid}
+                />
               </div>
             ))}
           </div>
@@ -107,9 +110,10 @@ const WorkPost = ({ data }) => {
               defaultValue={options[0][1]}
               onBlur={e => setSelectedOption(e.target.value)}
               onChange={e => setSelectedOption(e.target.value)}
+              title="Selecione a embalagem"
             >
               {options.map(product => (
-                <option key={product[0]} value={product}>
+                <option key={product[0]} value={product} title={product[0]}>
                   {product[0]}
                 </option>
               ))}
@@ -123,6 +127,7 @@ const WorkPost = ({ data }) => {
               type="up-down"
               value={quantity}
               onChange={value => setQuantity(value)}
+              title="Selecione a quantidade"
             />
           </S.Quantity>
           <S.Price>
@@ -161,7 +166,7 @@ const WorkPost = ({ data }) => {
             %0a%0a \u002A _Lembrando que nossa produção leva de *2 a 3 dias úteis*_`}
             rel="noopener noreferrer"
             target="_blank"
-            title="Pedir via WhatsApp"
+            title="Faça sua encomenda via WhatsApp"
           >
             Fazer encomenda
           </S.ButtonPrimaryPost>

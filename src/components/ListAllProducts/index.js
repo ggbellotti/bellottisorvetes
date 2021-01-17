@@ -55,7 +55,7 @@ const ListAllProducts = () => {
               },
             },
           }) => (
-            <S.Products key={id} to={slug}>
+            <S.Products cover bg="#2B1500" key={id} to={slug}>
               <S.BackgroundImage fluid={fluid} />
               <S.Overlay />
               <S.Infos>
