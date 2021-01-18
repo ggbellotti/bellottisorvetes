@@ -43,6 +43,14 @@ module.exports = {
             },
           },
           {
+            resolve: "gatsby-remark-images-grid",
+            options: {
+              className: "grid-images",
+              gridGap: "20px",
+              margin: "20px auto",
+            },
+          },
+          {
             resolve: "gatsby-remark-images-zoom",
           },
           `gatsby-remark-lazy-load`,
