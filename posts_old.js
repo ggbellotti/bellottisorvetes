@@ -7,22 +7,22 @@ import React, { useState } from "react"
 import { ArrowLeft } from "@styled-icons/bootstrap/ArrowLeft"
 import { ArrowRight } from "@styled-icons/bootstrap/ArrowRight"
 import Layout from "../components/Layout"
+import ListProducts from "../components/ListProducts"
 import NumericInput from "react-numeric-input"
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
 import { rand } from "@jsweb/randkey"
 import { useKeenSlider } from "keen-slider/react"
 
-const EmbalagemPost = ({ data }) => {
+const WorkPost = ({ data }) => {
   const post = data.markdownRemark
-  console.log(data)
 
   //INFOS PRODUCTS
   const InfosProduct = post.frontmatter
   const phone = data.site.siteMetadata.phone
   const deliveryOrder = data.site.siteMetadata.deliveryOrder
   const detailsOrder = data.site.siteMetadata.detailsOrder
-  const options = InfosProduct.sabores
+  const options = InfosProduct.packs
   const [selectedOption, setSelectedOption] = useState(options[0])
   const message = "Gostaria de fazer essa encomenda"
 
@@ -31,7 +31,9 @@ const EmbalagemPost = ({ data }) => {
   const year = today.getFullYear()
   const orderNumber = year + "-" + rand(8, 6)
   const [quantity, setQuantity] = useState(1)
-  const value = parseFloat(selectedOption.toString().split(",", 2)[1])
+  const value = parseFloat(
+    selectedOption.toString().split("litros,", 2)[1].replace(",", ".")
+  )
 
   //TOTAL ORDER
   const qty = quantity
@@ -100,7 +102,7 @@ const EmbalagemPost = ({ data }) => {
           <h1>{InfosProduct.name}</h1>
           <p>{InfosProduct.description}</p>
           <S.Pack>
-            <span>Selecione o sabor</span>
+            <span>Selecione a embalagem</span>
             <select
               name="packs"
               id="packs"
@@ -129,8 +131,7 @@ const EmbalagemPost = ({ data }) => {
           </S.Quantity>
           <S.Price>
             <span>
-              R$ {selectedOption.toString().split(",", 2)[1].replace(".", ",")}
-              &nbsp;
+              R$ {selectedOption.toString().split("litros,", 2)[1]}&nbsp;
             </span>
             <span>/Uni</span>
           </S.Price>
@@ -153,13 +154,12 @@ const EmbalagemPost = ({ data }) => {
             href={`https://wa.me/${phone}?text=${message} \u2193 %0a
             %0a*Número do pedido*: ${orderNumber} %0a
             %0a\u2192 *${InfosProduct.name.toUpperCase()}*
-            %0a      \`\`\`\u2022 Sabor: ${
-              selectedOption.toString().split(",", 2)[0]
-            }\`\`\`
-            %0a      \`\`\`\u2022 R$ ${selectedOption
-              .toString()
-              .split(",", 2)[1]
-              .replace(".", ",")} /uni\`\`\`
+            %0a      \`\`\`\u2022 Embalagem de: ${
+              selectedOption.toString().split("litros,", 2)[0]
+            }litros\`\`\`
+            %0a      \`\`\`\u2022 R$ ${
+              selectedOption.toString().split("litros,", 2)[1]
+            } /uni\`\`\`
             %0a      \`\`\`\u2022 Quantidade: ${quantity}\`\`\`
             %0a*TOTAL: ${totalPrice}*
             %0a%0a \u002A _Lembrando que nossa produção leva de *2 a 3 dias úteis*_`}
@@ -171,12 +171,19 @@ const EmbalagemPost = ({ data }) => {
           </S.ButtonPrimaryPost>
         </S.InfoProduct>
       </S.Container>
+      <S.Recommended>
+        <ListProducts
+          title="Sabores que você vai gostar"
+          subtitle="Confira outros sabores"
+          description=" "
+        />
+      </S.Recommended>
     </Layout>
   )
 }
 
 export const query = graphql`
-  query PostEmbalagens($slug: String!) {
+  query Post($slug: String!) {
     site {
       siteMetadata {
         siteURL
@@ -195,7 +202,7 @@ export const query = graphql`
       frontmatter {
         name
         description
-        sabores
+        packs
         image {
           childImageSharp {
             fluid {
@@ -216,4 +223,4 @@ export const query = graphql`
     }
   }
 `
-export default EmbalagemPost
+export default WorkPost

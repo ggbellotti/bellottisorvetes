@@ -3,9 +3,13 @@ const links = [
     label: "Inicio",
     url: "/",
   },
+  // {
+  //   label: "Lista de sabores",
+  //   url: "/lista-de-sabores/",
+  // },
   {
-    label: "Lista de sabores",
-    url: "/lista-de-sabores/",
+    label: "Embalagens",
+    url: "/embalagens/",
   },
   {
     label: "Sobre nós",

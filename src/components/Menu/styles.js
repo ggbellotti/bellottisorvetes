@@ -63,6 +63,14 @@ export const LinkWhatsApp = styled.a`
     display: block;
   `}
 `
+export const DownloadFile = styled.a`
+  background-color: var(--third-color);
+  padding: 10px;
+  color: var(--main-color);
+  font-size: 1.5rem;
+  margin-top: 25px;
+  margin-bottom: 25px;
+`
 export const SocialLinksMenu = styled.div`
   transition: all 0.25s;
   opacity: ${({ open }) => (open ? "0" : "1")};
@@ -161,11 +169,11 @@ export const MenuItems = styled.li`
   &:last-of-type {
     margin-bottom: 0;
   }
-  ${media.lessThan("medium")`
+  /* ${media.lessThan("medium")`
     &:last-of-type {
       margin-bottom: 35px;
     }
-  `}
+  `} */
 `
 export const MenuItemsLinks = styled(AniLink)`
   font-size: 1.75rem;

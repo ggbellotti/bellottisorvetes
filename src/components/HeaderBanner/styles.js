@@ -95,13 +95,27 @@ export const Infos = styled.div`
     margin-right: 50px;
     margin-bottom: 25px;
   }
-  ${media.lessThan("small")`
-    a:first-child{
-      margin-right: 20px;
+  ${media.lessThan("small")`  
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    a{
+      margin: 0;
+    }
+    a:first-child {
+      margin: 0 0 10px 0;
     }
   `}
 `
-export const Buttons = styled.div``
+export const Buttons = styled.div`
+  ${media.lessThan("small")`
+    display: flex;
+    flex-direction: column;
+  `}
+`
 export const Title = styled.h1`
   font-size: 3.625rem;
   line-height: 1.3;

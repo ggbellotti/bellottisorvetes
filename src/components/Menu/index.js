@@ -5,6 +5,7 @@ import { graphql, useStaticQuery } from "gatsby"
 
 import Logo from "../Logo"
 import SocialLinks from "../SocialLinks"
+import downloadFile from "../../../static/lista-de-sabores.pdf"
 import links from "./content"
 
 const Menu = () => {
@@ -56,6 +57,13 @@ const Menu = () => {
               </S.MenuItemsLinks>
             </S.MenuItems>
           ))}
+          <S.DownloadFile
+            className="download-file"
+            href={downloadFile}
+            download
+          >
+            Baixar lista de sabores
+          </S.DownloadFile>
           <S.LinkWhatsApp
             href={`https://wa.me/message/${WhatsApp}`}
             rel="nofollow noreferrer"

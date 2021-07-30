@@ -32,7 +32,9 @@ exports.createPages = ({ graphql, actions }) => {
   return graphql(
     `
       {
-        allMarkdownRemark {
+        allMarkdownRemark(
+          filter: { fileAbsolutePath: { regex: "/embalagensInfos/" } }
+        ) {
           edges {
             node {
               fields {

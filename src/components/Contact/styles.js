@@ -17,6 +17,9 @@ export const Container = styled.div`
 `
 export const Infos = styled.div`
   z-index: 2;
+  a {
+    max-width: max-content;
+  }
   a:first-child {
     margin-right: 50px;
     margin-bottom: 25px;

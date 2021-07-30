@@ -9,6 +9,9 @@ export const Container = styled.div`
     width: calc(100% + 50px);
     margin-left: -25px;
   }
+  @media (max-width: 570px) {
+    margin-bottom: 25px;
+  }
 `
 export const Wrapper = styled.div`
   display: flex;

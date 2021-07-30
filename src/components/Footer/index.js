@@ -4,6 +4,7 @@ import { graphql, useStaticQuery } from "gatsby"
 
 import Logo from "../Logo"
 import React from "react"
+import downloadFile from "../../../static/lista-de-sabores.pdf"
 
 const Footer = () => {
   const { site } = useStaticQuery(graphql`
@@ -34,13 +35,16 @@ const Footer = () => {
           <S.Link cover bg="#2B1500" to="/sobre-nos/" title="Sobre nós">
             <S.SubTitle>Sobre nós</S.SubTitle>
           </S.Link>
-          <S.Link
+          {/* <S.Link
             cover
             bg="#2B1500"
             to="/lista-de-sabores/"
             title="Lista de sabores"
           >
             <S.SubTitle>Lista de sabores</S.SubTitle>
+          </S.Link> */}
+          <S.Link cover bg="#2B1500" to="/embalagens/" title="Embalagens">
+            <S.SubTitle>Embalagens</S.SubTitle>
           </S.Link>
         </S.Column>
         <S.Column>
@@ -51,6 +55,14 @@ const Footer = () => {
           <S.Link cover bg="#2B1500" to="/contato/" title="Dúvidas gerais">
             <S.SubTitle>Dúvidas gerais</S.SubTitle>
           </S.Link>
+          <a
+            className="deliveryIfood"
+            target="_blank"
+            href={downloadFile}
+            rel="noopener noreferrer"
+          >
+            <S.SubTitle>Baixar lista de sabores</S.SubTitle>
+          </a>
         </S.Column>
         <S.Column>
           <S.Title>Social</S.Title>

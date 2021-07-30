@@ -57,6 +57,16 @@ export const Wrapper = styled.div`
 export const LogoImg = styled.div`
   width: 90px;
   height: auto;
+  a {
+    display: block !important;
+    width: 100% !important;
+    &:hover {
+      text-decoration: none !important;
+      &::after {
+        opacity: 0 !important;
+      }
+    }
+  }
 `
 export const Title = styled.h3`
   font-family: "Titillium Web";
@@ -99,6 +109,26 @@ export const Column = styled.div`
   margin: 0 45px;
   display: flex;
   flex-direction: column;
+  a {
+    display: inline-block;
+    width: fit-content;
+    &::after {
+      content: "";
+      display: block;
+      opacity: 0;
+      width: 100%;
+      height: 2px;
+      bottom: 9px;
+      position: relative;
+      background-color: white;
+      transition: all var(--animations-time);
+    }
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
   &:first-of-type {
     margin-right: 85px;
     margin-left: -25px;

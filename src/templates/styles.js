@@ -154,9 +154,14 @@ export const Pack = styled.div`
     margin-top: 10px;
     background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.25 3L7.07156 13.6875L0 3H14.25Z' fill='white'/%3E%3C/svg%3E%0A");
     background-repeat: no-repeat;
-    background-position: 80%;
     background-position-y: center;
-    max-width: 150px;
+    /* background-position: 80%; USED FOR SABORES */
+    /* max-width: 150px; USED FOR SABORES*/
+
+    /* NEW AJUSTS */
+    background-position: 90%;
+    padding-right: 50px;
+    max-width: max-content;
     &:focus {
       border: none;
       outline: none;

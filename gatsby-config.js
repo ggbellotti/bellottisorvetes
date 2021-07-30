@@ -102,6 +102,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `embalagens`,
+        path: `${__dirname}/contents/embalagensInfos`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-fonts-v2`,
       options: {
         fonts: [

@@ -2,7 +2,8 @@ import { HeaderBannerHome } from "../components/HeaderBanner"
 import Highlight from "../components/Highlight"
 import HighlightOffers from "../components/HighlightOffers"
 import Layout from "../components/Layout"
-import ListProducts from "../components/ListProducts"
+import ListPacks from "../components/ListPacks"
+// import ListProducts from "../components/ListProducts"
 import React from "react"
 import SEO from "../components/seo"
 
@@ -13,7 +14,8 @@ const IndexPage = () => (
       description="Desde 1996 oferecendo a melhor qualidade. Entre no nosso site e faça sua encomenda!"
     />
     <HeaderBannerHome />
-    <ListProducts />
+    {/* <ListProducts /> */}
+    <ListPacks />
     <HighlightOffers />
     <Highlight />
   </Layout>

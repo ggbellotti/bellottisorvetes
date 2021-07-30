@@ -5,7 +5,7 @@ subtitle: Oferta especial
 title: Compre 4 potes e ganhe um brinde
 description: Está esperando o quê? Ao comprar 4 potes você ganhará um brinde surpresa. Basta escolher os seus sabores preferidos que deseja comprar (veja as regras) e realizar a compra. O melhor sorvete para o melhor cliente.
 titlePrimaryBtn: Comprar agora
-urlPrimaryBtn: "/lista-de-sabores/"
+urlPrimaryBtn: "/embalagens/"
 titleSecondaryBtn: Informações
 urlSecondaryBtn: "/contato/"
 colorBg: "#CDE9EA"

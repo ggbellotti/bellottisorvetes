@@ -34,7 +34,7 @@ const Contact = () => {
           className="contacts"
           href={`https://wa.me/message/${site.siteMetadata.codeWhatsApp}`}
           rel="noopener noreferrer"
-          title={`WhatsApp ${Phone[1]}`}
+          title={`WhatsApp: ${Phone[1]}`}
           target="_blank"
         >
           <Whatsapp />
@@ -48,7 +48,7 @@ const Contact = () => {
           className="contacts"
           href={`mailto:${EmailContact}`}
           rel="noopener noreferrer"
-          title={`WhatsApp ${EmailContact}`}
+          title={`E-mail de contato: ${EmailContact}`}
           target="_blank"
         >
           <Email />
